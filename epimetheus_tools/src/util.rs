@@ -23,7 +23,8 @@ pub mod sunny_log{
         }else if symbol=="debug"{
             symbol_color="【D】".color("white").on_color("blue").bold();
         }
-        eprintln!("{} {}{}",now.format("%Y%m%d-%H:%M:%S%.f").to_string(), msg,symbol_color);
+        //eprintln!("{} {}{}",now.format("%Y%m%d-%H:%M:%S%.f").to_string(), msg,symbol_color);
+        eprintln!("{} {}{}",symbol_color,now.format("%Y%m%d-%H:%M:%S%.f").to_string(), msg);
     }
     #[allow(unused_must_use)]
     pub fn info(msg: String){
